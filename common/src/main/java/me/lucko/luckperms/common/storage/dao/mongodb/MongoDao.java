@@ -89,7 +89,7 @@ public class MongoDao extends AbstractDao {
 
     @Override
     public void init() {
-        if (!Strings.isNullOrempty(this.connectionURI)) {
+        if (!Strings.isNullOrEmpty(this.connectionURI)) {
             this.mongoClient = new MongoClient(new MongoClientURI(this.connectionURI));
         } else {
             MongoCredential credential = null;
